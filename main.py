@@ -10,9 +10,9 @@ from PyQt5 import QtWidgets
 from PyQt5.QtGui import QImage, QPixmap
 from PyQt5.QtCore import Qt
 
-from gui import Ui_MainWindow
-from process import imageProcessing, batchProcess
-from split import split_dot, split_slash
+from gui.gui import Ui_MainWindow
+from process import image_process, batch_process
+from util.split import split_dot, split_slash
 
 PATH_NAME_SUFFIX = ''
 STATE = True
@@ -75,7 +75,7 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         global STATE
         STATE = True
 
-        self.img[1:7], STATE = imageProcessing(PATH_NAME_SUFFIX)
+        self.img[1:7], STATE = image_process(PATH_NAME_SUFFIX)
         self.refresh_show()
 
     def refresh_show(self):
@@ -119,16 +119,17 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     def batch_process_slot(self):
 
         self.cwd = os.getcwd()
-        path = QtWidgets.QFileDialog.getExistingDirectory(self, "选取文件夹", self.cwd)
+        path = QtWidgets.QFileDialog.getExistingDirectory(self, "Select folder", self.cwd)
 
         if path is '':
             return
 
-        sucess, fail, time = batchProcess(path)
-        self.refresh_state(sucess, fail, time)
+        success, fail, time = batch_process(path)
+        self.refresh_state(success, fail, time)
 
-    def refresh_state(self, sucess, fail, time):
-        self.state.setText("成功：{}个  失败：{}个 总用时 {} 秒".format(sucess, fail, time))
+    def refresh_state(self, success, fail, time):
+        self.state.setText("成功：{}个  失败：{} 个  总用时: {}秒".format(success, fail, time))
+        self.state.setAlignment(Qt.AlignCenter)
 
 
 if __name__ == '__main__':

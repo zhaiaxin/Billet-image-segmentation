@@ -8,7 +8,6 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -53,7 +52,7 @@ class Ui_MainWindow(object):
         self.label_1 = QtWidgets.QLabel(self.centralwidget)
         self.label_1.setGeometry(QtCore.QRect(220, 290, 181, 231))
         self.label_1.setStyleSheet("\n"
-                                   "background-color: rgb(255, 255, 255);")
+"background-color: rgb(255, 255, 255);")
         self.label_1.setObjectName("label_1")
         self.label_2 = QtWidgets.QLabel(self.centralwidget)
         self.label_2.setGeometry(QtCore.QRect(410, 290, 181, 231))
@@ -89,13 +88,13 @@ class Ui_MainWindow(object):
         self.btnBatch.setText(_translate("MainWindow", "批处理"))
         self.label_3.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\">第3部分</p></body></html>"))
         self.label_5.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\">第5部分</p></body></html>"))
-        self.label_1.setText(_translate("MainWindow",
-                                        "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-                                        "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-                                        "p, li { white-space: pre-wrap; }\n"
-                                        "</style></head><body style=\" font-family:\'SimSun\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-                                        "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">第1部分</p></body></html>"))
+        self.label_1.setText(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'SimSun\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">第1部分</p></body></html>"))
         self.label_2.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\">第2部分</p></body></html>"))
         self.label_4.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\">第4部分</p></body></html>"))
         self.label_6.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\">第6部分</p></body></html>"))
         self.state.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\">状态</p></body></html>"))
+
